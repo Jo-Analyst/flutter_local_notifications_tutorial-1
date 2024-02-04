@@ -17,7 +17,7 @@ void main() async {
       await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
   if (initialNotification?.didNotificationLaunchApp == true) {
     // LocalNotifications.onClickNotification.stream.listen((event) {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       // print(event);
       navigatorKey.currentState!.pushNamed('/another',
           arguments: initialNotification?.notificationResponse?.payload);
